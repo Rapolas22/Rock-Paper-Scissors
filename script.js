@@ -36,11 +36,25 @@ function playRound(humanChoice, computerChoice){
     }
 }
 
+function game(){
+    for(let i = 0; i < 5; i++){
+        const humanChoice = getHumanChoice();
+        const computerChoice = getComputerChoice();
+        const result = playRound(humanChoice, computerChoice);
+    }
+}
+
 
 let humanScore = 0;
 let computerScore = 0;
 
+if(humanScore > computerScore){
+    alert("You win the game!");
+}
+else if(humanScore < computerScore){
+    alert("Computer wins the game!");
+}
+else{
+    alert("The game is a tie!");
+}
 
-
-const sigma = getComputerChoice();
-console.log(sigma);
