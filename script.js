@@ -91,13 +91,14 @@ btn.forEach((button) => {
     if(humanScore === 5 || computerScore === 5)
     {
         result.textContent = `Total score: You got ${humanScore} and the computer got ${computerScore}`;
+        result.style.display = "block";
         stopGame();
         runningScore.style.display = "none"; // paslėpti, ne pašalinti iš DOM
 
         setTimeout(() => {
             result.style.display = "none";
             runningScore.textContent = `You: ${humanScore}, Computer: ${computerScore}`;
-            runningScore.style.display = "block"; // vėl parodyti kitam žaidimui
+            runningScore.style.display = "block";
         }, 10000);
     }
 
